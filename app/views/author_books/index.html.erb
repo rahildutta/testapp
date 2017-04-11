@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Author Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Book</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @author_books.each do |author_book| %>
+      <tr>
+        <td><%= author_book.author %></td>
+        <td><%= author_book.book %></td>
+        <td><%= link_to 'Show', author_book %></td>
+        <td><%= link_to 'Edit', edit_author_book_path(author_book) %></td>
+        <td><%= link_to 'Destroy', author_book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Author book', new_author_book_path %>

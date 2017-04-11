@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @author.Name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @author.Address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @author.Email %>
+</p>
+<p>
+  <strong>No of books Published:</strong>
+  <%= @author.no_of_books_published %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @author.active %>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
